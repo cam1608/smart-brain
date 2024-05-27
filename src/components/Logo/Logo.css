@@ -1,0 +1,8 @@
+
+
+.inner-tilt {
+    height: '130px';
+    width: '130px';
+    background-color: 'darkgreen';
+    background: linear-gradient(90deg, rgb(11, 12, 90) 35%, rgb(35, 68, 134) 100%);
+}
