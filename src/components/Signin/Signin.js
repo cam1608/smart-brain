@@ -18,7 +18,7 @@ class Signin extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        fetch('http://localhost:3000/signin', {
+        fetch('https://shielded-garden-76588-28d745998e2a.herokuapp.com/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -31,6 +31,8 @@ class Signin extends React.Component {
                 if (user.id) {
                     this.props.loadUser(user);
                     this.props.onRouteChange('home');
+                } else {
+                    alert('Wrong user or password');
                 }
             })
     }
