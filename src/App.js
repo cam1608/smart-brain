@@ -71,7 +71,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input }, () => {
-      fetch('https://shielded-garden-76588-28d745998e2a.herokuapp.com/imageurl', {
+      fetch('https://smart-brain-api-production-ccd0.up.railway.app/imageurl', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -82,7 +82,7 @@ class App extends Component {
       .then(result => {
         if (result.outputs[0].data.regions) {
           this.calculateFaceLocation(result);
-          fetch('https://shielded-garden-76588-28d745998e2a.herokuapp.com/image', {
+          fetch('https://smart-brain-api-production-ccd0.up.railway.app/image', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
